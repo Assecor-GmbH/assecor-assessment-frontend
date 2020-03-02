@@ -28,6 +28,9 @@ Choosing one of the following APIs:
 - http://ergast.com/mrd/
 
 your job is to create a simple web application, which visualizes the API data. In case of SWAPI, one way might be to start with a list of movies, and then navigate your way down via characters or other entities. You do not have to use all the resources the API is offering you, but there should be atleast one or two layers of master-detail relationship.
+Please follow the mockups under the following link:
+https://xd.adobe.com/view/b3c98134-11a8-44c2-5dd2-477b8550307f-c5f8/screen/c8fb4386-9d0d-4913-87e0-703d19d75589/Charaktere .
+The input masks for new elements are only about the UI implementation, since the interface does not offer such functionality.
 
 ## acceptance criteria
 - the application runs and shows data of the selected API
