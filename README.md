@@ -2,7 +2,7 @@
  
 ## Zielsetzung
 Zur Wahl stehen folgende APIs:
-- https://swapi.co/
+- https://swapi.dev/
 - http://ergast.com/mrd/
 
 Ziel ist es, eine Webanwendung zu erstellen, welche die Daten der Schnittstellen visualisiert. Im Fall der SWAPI könnte man mit einer Liste der Filme beginnen, und sich über auftretende Charaktere weiter vertiefen. Es ist nicht erforderlich, alle Ressourcen der Schnittstelle zu verwerten, aber es sollte zumindest zu einer Master-Detail Beziehung kommen, mit welcher von einer Ressource, auf die Detailansicht einer anderen referenziert wird.
