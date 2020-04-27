@@ -24,7 +24,7 @@ Bei den Eingabemasken für neue Elemente geht es nur um die UI Umsetzung, da die
 
 ## main goal
 Choosing one of the following APIs:
-- https://swapi.co/
+- https://swapi.dev/
 - http://ergast.com/mrd/
 
 your job is to create a simple web application, which visualizes the API data. In case of SWAPI, one way might be to start with a list of movies, and then navigate your way down via characters or other entities. You do not have to use all the resources the API is offering you, but there should be atleast one or two layers of master-detail relationship.
