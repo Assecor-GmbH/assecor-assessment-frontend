@@ -1,0 +1,56 @@
+@import "src/assets/styles/components/variables";
+@import "src/assets/styles/components/mixins";
+
+.header {
+  border-bottom: 1px solid $border-color;
+  @include box-shadow(0, 3px, 6px, $gray-transparent-1);
+  position: relative;
+  height: 133px;
+
+  display: flex;
+  align-content: center;
+
+  .logo-wrapper {
+    align-items: center;
+    display: flex;
+    height: 133px;
+
+    .logo {
+      width: 80px;
+      max-width: 100%;
+    }
+  }
+
+  .col-lg-1 {
+    padding-right: 0;
+  }
+
+  .search-box {
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    height: 133px;
+
+    label {
+      input {
+        @include border-radius(2px);
+        padding: 19px;
+        height: 50px;
+        width: 200px;
+      }
+    }
+  }
+
+  @media #{$breakpoint-tablet} {
+    height: 100px;
+    .logo-wrapper {
+      height: 100px;
+
+      .logo {
+        width: 100px;
+      }
+    }
+
+  }
+}
+

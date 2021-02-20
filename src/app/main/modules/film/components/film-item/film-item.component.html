@@ -1,0 +1,21 @@
+<div class="list-item">
+  <a [routerLink]="findUrlPipe.transform(filmItem.url)">
+    <img src="assets/images/Unbenannt.png" alt="{{filmItem.title}}">
+  </a>
+
+  <div class="content">
+    <h2><a [routerLink]="findUrlPipe.transform(filmItem.url)">
+      {{filmItem.title}}
+    </a></h2>
+    <p>
+      Director: {{filmItem.director}}<br>
+      Produzenten: {{filmItem.producer}} <br>
+      Erscheinungsdatum: {{filmItem.release_date}}<br>
+    </p>
+    <span><a [routerLink]="findUrlPipe.transform(filmItem.url)">
+        Mehr Informationen....
+      </a></span>
+  </div>
+
+</div>
+

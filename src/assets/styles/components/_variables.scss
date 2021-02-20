@@ -1,0 +1,65 @@
+/*#region ============== font ========== */
+$fo-5: 5px;
+$fo-4: 4px;
+$fo-10: 10px;
+$fo-11: 11px;
+$fo-12: 12px;
+$fo-13: 13px;
+$fo-14: 14px;
+$fo-15: 15px;
+$fo-16: 16px;
+$fo-18: 18px;
+$fo-19: 19px;
+$fo-20: 20px;
+$fo-22: 22px;
+$fo-24: 24px;
+$fo-25: 25px;
+$fo-32: 32px;
+
+$font-weight1: 100;
+$font-weight2: 200;
+$font-weight3: 300;
+$font-weight4: 400;
+$font-weight5: 500;
+$font-weight6: 600;
+$font-weight7: 700;
+/*#endregion ========== font ========== */
+
+/*#region ============ color ========== */
+$black: #000000;
+$white: #ffffff;
+$error: #d7373f;
+$bg-color: #FFFFFF;
+$text-color: #10172C;
+$border-color: rgba(16, 23, 44, 0.15);
+
+$gray-dark: #707070;
+$gray-light: #BBBBBB;
+
+$list-item-bg: rgba(187, 187, 187, 0.24);
+$gray-transparent-1: rgba(0, 0, 0, 0.16);
+$gray-transparent-2: rgba(16, 23, 44, 0.15);
+
+$active-item: #B88282;
+
+/*#endregion ========= color ========== */
+
+
+//border-radiusP
+$radius-0: 0;
+$radius-1: 4px;
+$radius-2: 8px;
+$radius-04: .4rem;
+
+//breakpoint
+$breakpoint-mobile: "only screen and (max-width : 575px)";
+$breakpoint-tablet: "only screen and (max-width: 768px)";
+$breakpoint-l-desktop: "only screen and (max-width: 992px)";
+$breakpoint-xl-desktop: "only screen and (max-width: 1200px)";
+
+$breakpoint-min-xl-desktop: "only screen and (min-width: 1024px)";
+$breakpoint-min-l-desktop: "only screen and (min-width: 992px)";
+$breakpoint-min-l-tablet:  "only screen and (min-width: 768px)";
+
+
+

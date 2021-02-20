@@ -1,0 +1,54 @@
+<div class="main-container" *ngIf="{filmInfo$ : singleFilmItems$ | async} as O">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="header-container">
+              <h2 class="light">{{FilmDeatil}}</h2>
+              <span class="border"></span>
+              <h1>{{O.filmInfo$.title}}</h1>
+              <h2 class="light">Episode {{O.filmInfo$.episode_id}}</h2>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row row-reverse-sm ">
+          <div class="col-lg-6 col-md-12 col-12">
+            <app-film-details [filmInfo]="O.filmInfo$"></app-film-details>
+
+            <div class="category-container">
+              <app-category-list
+                *ngIf="O.filmInfo$.characters.length"
+                [categoryTitle]="categoryList[0]"
+                [categoryList]="O.filmInfo$.characters">
+              </app-category-list>
+
+              <app-category-list
+                *ngIf="O.filmInfo$.planets.length"
+                [categoryTitle]="categoryList[1]"
+                [categoryList]="O.filmInfo$.planets">
+              </app-category-list>
+
+              <app-category-list
+                *ngIf="O.filmInfo$.species.length"
+                [categoryTitle]="categoryList[2]"
+                [categoryList]="O.filmInfo$.species">
+              </app-category-list>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12 col-12 pl-0">
+            <app-film-slider></app-film-slider>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
