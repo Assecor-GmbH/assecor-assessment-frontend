@@ -1,0 +1,140 @@
+@import "src/assets/styles/components/variables";
+@import "src/assets/styles/components/mixins";
+
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  height: 133px;
+  padding-left: 35px;
+  position: relative;
+}
+
+.menu_btn {
+  color: $gray-light;
+  background-color: transparent;
+  border: 1px solid $gray-light;
+  @include border-radius(4px);
+  height: 35px;
+  width: 48px;
+  top: 30%;
+  right: 0;
+  position: absolute;
+
+  span {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+.btn-close {
+  position: fixed;
+  z-index: 9999;
+  right: 270px;
+  top: 30px;
+  display: none;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  @include transition(al, 300ms);
+
+  svg {
+    color: $gray-light;
+  }
+
+  &.open {
+    display: flex;
+  }
+}
+
+.menu_wide {
+  li {
+    display: inline-block;
+    margin-right: 50px;
+
+    a {
+      color: $text-color;
+
+      &:hover, &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.menu_mobile {
+  .menu_mobile_wrapper {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 9999;
+    background: $white;
+    transition: all 500ms ease;
+
+    &.open {
+      right: 0;
+    }
+  }
+
+  ul{
+    padding: 3rem 2rem;
+    text-align: center;
+    li{
+      margin-bottom: 2rem;
+      a {
+        color: $text-color;
+        font-size: 20px;
+
+        &:hover, &.active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .bg-wrap {
+    content: ' ';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+
+    &.open {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu-wrapper {
+    padding-left: 0;
+  }
+
+  .menu_wide {
+    li {
+      margin-right: 28px;
+    }
+  }
+}
+
+@media #{$breakpoint-tablet} {
+  .menu-wrapper {
+    padding-left: 5px;
+    height: 100px;
+  }
+
+  .menu_wide {
+    li {
+      margin-right: 30px;
+    }
+  }
+
+}

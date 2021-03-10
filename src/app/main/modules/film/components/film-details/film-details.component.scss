@@ -1,0 +1,33 @@
+@import "src/assets/styles/components/variables";
+
+.film-detail {
+  padding-right: 120px;
+  margin-bottom: 70px;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 23px;
+
+    &.desc {
+      margin-top: 34px;
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    padding-right: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media #{$breakpoint-tablet} {
+    padding-right: 0;
+    margin-bottom: 50px;
+    p {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}

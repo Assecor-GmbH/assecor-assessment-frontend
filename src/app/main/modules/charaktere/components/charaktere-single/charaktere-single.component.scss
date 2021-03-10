@@ -1,0 +1,42 @@
+@import "src/assets/styles/components/variables";
+
+@media #{$breakpoint-l-desktop} {
+  .col-md-12 {
+    &.pl-0 {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media #{$breakpoint-tablet} {
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .col-md-12 {
+    &.pl-0 {
+      padding-left: 15px !important;
+    }
+  }
+}
+
+.header-container {
+  text-align: center;
+  padding-top: 87px;
+  margin-bottom: 100px;
+
+  .border {
+    width: 53px;
+    height: 1px;
+    display: block;
+    margin: 0 auto;
+    border-top: 1px solid $border-color;
+  }
+
+  @media #{$breakpoint-tablet} {
+    padding-top: 50px;
+    margin-bottom: 60px;
+  }
+}

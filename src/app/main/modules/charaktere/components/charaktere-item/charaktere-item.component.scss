@@ -1,0 +1,80 @@
+@import "src/assets/styles/components/variables";
+
+.list-item {
+  background-color: $list-item-bg;
+  margin-bottom: 30px;
+
+  .content {
+    padding: 24px;
+    min-height: 165px;
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    a {
+      color: $text-color;
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+
+  p {
+    line-height: 17px;
+    margin: 16px 0;
+    padding: 0;
+  }
+
+  span, a {
+    color: $text-color;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  span {
+    position: absolute;
+    bottom: 24px;
+  }
+
+  @media #{$breakpoint-tablet} {
+    h2 {
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 993px) and (max-width: 1199px) {
+    .content {
+      padding: 22px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    .content {
+      padding: 18px;
+    }
+  }
+
+  @media #{$breakpoint-tablet} {
+    .content {
+      padding: 18px;
+    }
+  }
+
+  @media #{$breakpoint-mobile} {
+    margin-bottom: 15px;
+    .content {
+      padding: 18px;
+      min-height: auto;
+    }
+
+    span {
+      position: relative;
+      bottom: 0;
+    }
+  }
+}

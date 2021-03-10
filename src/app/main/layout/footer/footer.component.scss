@@ -1,0 +1,19 @@
+@import "src/assets/styles/components/variables";
+
+footer{
+  border-top: 1px solid $border-color;
+  display: flex;
+    align-items: center;
+  height: 79px;
+  p{
+    color:$gray-light;
+    font-weight: bold;
+  }
+
+  @media #{$breakpoint-mobile} {
+    height: 60px;
+    p{
+      font-size: 12px;
+    }
+  }
+}

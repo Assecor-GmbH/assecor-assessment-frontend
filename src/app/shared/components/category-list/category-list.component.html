@@ -1,0 +1,11 @@
+<div class="category-list">
+  <h2>{{categoryTitle.categoryName}}</h2>
+  <a
+    class='btn btn-gray'
+    *ngFor="let catItem  of categoryList | slice:0:3; let i=index"
+    [routerLink]="findUrlPipe.transform(catItem)"
+  >
+    {{categoryTitle.categoryItem}} {{i}}
+  </a>
+  <span class='btn btn-gray' >... </span>
+</div>

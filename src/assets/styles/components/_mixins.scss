@@ -1,0 +1,68 @@
+@mixin hover_card {
+  transition: all 500ms ease;
+  &:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+}
+
+@mixin header-btn {
+  color: $teal-1;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  border-radius: $radius-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+
+  &:hover {
+    background: $teal-4;
+    @media #{$breakpoint-tablet} {
+      background-color: transparent;
+    }
+  }
+}
+
+@mixin limited-text($line:9) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin transition($element, $speed) {
+  -webkit-transition: $element $speed;
+  -moz-transition: $element $speed;
+  -ms-transition: $element $speed;
+  -o-transition: $element $speed;
+  transition: $element $speed;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}

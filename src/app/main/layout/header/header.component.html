@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+
+          <div class="col-lg-1 col-md-2 col-3">
+            <div class="logo-wrapper">
+              <a routerLink="/" routerLinkActive="active">
+                <img class="logo" src="../../../../assets/images/logo.jpg" alt="star wars"/>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6 col-9">
+            <app-menu></app-menu>
+          </div>
+
+          <div class="col-lg-4 col-md-4" *ngIf="deviceType !== 'xs' && deviceType !== 'sm' ">
+            <div class="search-box">
+              <label>
+                <input type="text" placeholder="Search"/>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

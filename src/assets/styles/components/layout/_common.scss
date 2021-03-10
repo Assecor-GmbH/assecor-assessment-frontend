@@ -1,0 +1,123 @@
+@import '../variables';
+@import '../mixins';
+
+/*#region default*/
+html, body {
+  background-color: $bg-color;
+  font-family: 'Roboto', serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  min-height: 100%;
+  direction: ltr;
+  text-align: left;
+}
+
+a {
+  @include transition(all, 0.3s);
+}
+
+.light {
+  font-family: 'Roboto', serif;
+  font-weight: 100;
+}
+
+.d-rtl {
+  direction: rtl;
+}
+
+.d-ltr {
+  direction: ltr;
+}
+
+pre {
+  direction: ltr;
+  text-align: left;
+  word-break: break-all;
+}
+
+.shadow-box {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 3px 16px rgba(0, 0, 0, 0.16);
+}
+
+.carousel {
+  direction: ltr;
+}
+
+.slick-dots {
+  li {
+    height: 11px;
+    width: 11px;
+    margin: 0 5px 0 0;
+
+    button {
+      height: 11px;
+      width: 11px;
+      padding: 0;
+
+      &:before {
+        color: #404040;
+        opacity: 0.43;
+        width: 11px;
+        height: 11px;
+        line-height: 11px;
+        font-size: 11px;
+      }
+    }
+
+    &.slick-active {
+      button {
+        &:before {
+          color: $active-item;
+          opacity: 0.47;
+        }
+      }
+    }
+  }
+}
+
+input[type='text'] {
+  border: 1px solid $border-color;
+}
+
+h1 {
+  font-size: 75px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+@media #{$breakpoint-tablet} {
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .row-reverse-sm {
+    .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .row-reverse-sm {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media #{$breakpoint-mobile} {
+  .row-reverse-sm {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+

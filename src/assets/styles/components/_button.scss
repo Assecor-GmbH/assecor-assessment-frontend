@@ -1,0 +1,26 @@
+@import "src/assets/styles/components/variables";
+@import "src/assets/styles/components/mixins";
+
+.btn {
+  padding: 19px 26px;
+  @include border-radius(1px);
+  margin-right: 20px;
+
+  &.btn-gray {
+    background-color: $list-item-bg;
+    border-width: 0;
+    color: $text-color !important;
+
+    &:hover {
+      background-color: $list-item-bg;
+      border-width: 0;
+      color: $text-color !important;
+    }
+  }
+  @media #{$breakpoint-tablet} {
+    padding: 14px 20px;
+    margin-right: 10px;
+  }
+}
+
+

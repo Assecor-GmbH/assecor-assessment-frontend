@@ -1,0 +1,59 @@
+<div class="main-container" *ngIf="{charaktereInfo$ : singleCharaktereItems$ | async} as O">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="header-container">
+              <h2 class="light">{{CharaktereDeatil}}</h2>
+              <span class="border"></span>
+              <h1>{{O.charaktereInfo$.name}}</h1>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row row-reverse-sm ">
+          <div class="col-lg-6 col-md-12 col-12">
+            <app-charaktere-detail [peopleInfo]="O.charaktereInfo$"></app-charaktere-detail>
+
+            <div class="category-container">
+              <app-category-list
+                *ngIf="O.charaktereInfo$.films.length"
+                [categoryTitle]="categoryList[0]"
+                [categoryList]="O.charaktereInfo$.films">
+              </app-category-list>
+
+              <app-category-list
+                *ngIf="O.charaktereInfo$.starships.length"
+                [categoryTitle]="categoryList[1]"
+                [categoryList]="O.charaktereInfo$.starships">
+              </app-category-list>
+
+              <app-category-list
+                *ngIf="O.charaktereInfo$.species.length"
+                [categoryTitle]="categoryList[2]"
+                [categoryList]="O.charaktereInfo$.species">
+              </app-category-list>
+
+              <app-category-list
+                *ngIf="O.charaktereInfo$.vehicles.length"
+                [categoryTitle]="categoryList[2]"
+                [categoryList]="O.charaktereInfo$.vehicles">
+              </app-category-list>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12 col-12 pl-0">
+            <app-slider [sliderItems]="sliderItems"></app-slider>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

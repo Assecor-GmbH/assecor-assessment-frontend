@@ -1,0 +1,22 @@
+<div class="list-item">
+  <a [routerLink]="findUrlPipe.transform(peopleItem.url)">
+    <img src="assets/images/Unbenannt-1.png" alt="{{peopleItem.name}}">
+  </a>
+
+  <div class="content">
+    <h2><a [routerLink]="findUrlPipe.transform(peopleItem.url)">
+      {{peopleItem.name}}
+    </a></h2>
+    <p>
+      Name: {{peopleItem.name}}<br>
+      Gender: {{peopleItem.gender}}<br>
+      Height and Weight: {{peopleItem.height}} - {{peopleItem.mass}}<br>
+      Birth Year: {{peopleItem.birth_year}} <br>
+    </p>
+    <span><a [routerLink]="findUrlPipe.transform(peopleItem.url)">
+        Mehr Informationen....
+      </a></span>
+  </div>
+
+</div>
+
