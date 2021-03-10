@@ -8,6 +8,7 @@ import {FooterComponent} from './main/layout/footer/footer.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpInterceptorService} from './shared/services/http-interceptor.service';
 import {BrowserModule} from '@angular/platform-browser';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,11 @@ import {BrowserModule} from '@angular/platform-browser';
     MainComponent,
     HeaderComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     AppRoutingModule,
+    SharedModule,
     HttpClientModule,
     BrowserModule
   ],

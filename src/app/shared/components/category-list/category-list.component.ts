@@ -7,7 +7,7 @@ import {FindUrlPipe} from '../../pipes/find-url.pipe';
   styleUrls: ['./category-list.component.scss']
 })
 export class CategoryListComponent implements OnInit {
-debugger;
+
   @Input() categoryTitle!: {categoryName: string, categoryItem: string };
   @Input() categoryList!: [];
   constructor(public findUrlPipe: FindUrlPipe) { }

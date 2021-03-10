@@ -1,0 +1,15 @@
+@import "src/assets/styles/components/variables";
+
+h1 {
+  font-size: 75px;
+  font-weight: bold;
+  margin: 147px 0;
+  text-align: center;
+}
+
+@media #{$breakpoint-tablet} {
+  h1{
+    font-size: 60px;
+    margin: 80px;
+  }
+}

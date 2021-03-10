@@ -18,7 +18,6 @@ export class HttpInterceptorService implements HttpInterceptor {
         map((event: HttpEvent<any>) => {
           if (event instanceof HttpResponse) {
             console.log('success');
-            // console.log('stop loading');
           } else {
             console.log('loading');
           }

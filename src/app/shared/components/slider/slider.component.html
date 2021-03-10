@@ -1,10 +1,10 @@
 <ngx-slick-carousel class="carousel"
                     #slickModal="slick-carousel"
                     [config]="slideConfig">
-  <div ngxSlickItem class="slide" *ngFor="let item of commentsList">
+  <div ngxSlickItem class="slide" *ngFor="let item of sliderItems">
     <div class="slider_item">
       <div class="slider_image">
-        <img [src]="item.imgUrl" [alt]="item.fullName">
+        <img [src]="item.imgUrl" alt="image">
       </div>
     </div>
   </div>

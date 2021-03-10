@@ -23,7 +23,7 @@ export class MenuComponent {
     },
     {
       title: 'Charaktere',
-      link: null
+      link: '/people'
     },
     {
       title: 'Planeten',

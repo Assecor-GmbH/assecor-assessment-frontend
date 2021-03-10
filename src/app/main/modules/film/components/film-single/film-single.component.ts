@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {FilmResponseModel} from '../../../../../shared/models/film-response.model';
 import {Observable} from 'rxjs';
 import {FilmService} from '../../services/film.service';
+import {Title} from '@angular/platform-browser';
 
 @UntilDestroy()
 @Component({
@@ -14,6 +15,7 @@ import {FilmService} from '../../services/film.service';
 
 })
 export class FilmSingleComponent implements OnInit {
+  FilmDeatil = 'Film Deatils';
   filmItems: FilmResponseModel;
   singleFilmItems$!: Observable<FilmResponseModel>;
   categoryList = [
@@ -31,8 +33,21 @@ export class FilmSingleComponent implements OnInit {
     },
   ];
 
+  sliderItems = [
+    {
+      imgUrl: 'assets/images/slider_01.png'
+    },
+    {
+      imgUrl: 'assets/images/slider_01.png',
+    },
+    {
+      imgUrl: 'assets/images/slider_01.png',
+    }
+  ];
+
   constructor(private activatedRoute: ActivatedRoute,
-              private filmService: FilmService) {
+              private filmService: FilmService,
+              private titleService: Title) {
     this.singleFilmItems$ = this.filmService.singleFilmItems$;
   }
 
@@ -42,6 +57,7 @@ export class FilmSingleComponent implements OnInit {
       .subscribe(res => {
         // this.filmItems = res.filmItems;
         this.filmService.setFilmDetail(res.filmItems);
+        this.titleService.setTitle(`Filme | ${res.filmItems.title}`);
       });
   }
 }
